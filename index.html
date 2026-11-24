@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-precomposed.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPORTLINK | کشف و مقایسه باشگاه‌ها و مجموعه‌های ورزشی مشهد</title>
+    <meta name="description" content="پلتفرم ورزشی کشف، بررسی و مقایسه باشگاه‌ها و مجموعه‌های ورزشی مشهد — CONNECT. MOVE. GROW." />
+    <meta property="og:title" content="SPORTLINK | کشف و مقایسه باشگاه‌های ورزشی مشهد" />
+    <meta property="og:description" content="مرجع منظم معرفی، جست‌وجو و مقایسه باشگاه‌ها و مجموعه‌های ورزشی شهر مشهد." />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body data-page="home">
+    <a href="#main-content" class="skip-link">رفتن به محتوای اصلی</a>
+    <div id="site-header"></div>
+
+    <main id="main-content">
+      <!-- Hero Section & Main 2-Mode Search -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <span class="hero-slogan en-wordmark">CONNECT. MOVE. GROW.</span>
+              <h1 class="hero-title">کشف، بررسی و مقایسه باشگاه‌های ورزشی مشهد</h1>
+              <p class="hero-lead">
+                با <strong class="en-wordmark">SPORTLINK</strong> مجموعه‌های ورزشی محله‌های مشهد را بر اساس رشته، امکانات، ساعات فعالیت و تعرفه با هم مقایسه کنید و انتخاب مطمئن‌تری داشته باشید.
+              </p>
+
+              <div class="hero-search-panel">
+                <div class="segmented-control" role="group" aria-label="انتخاب نوع جست‌وجو">
+                  <button type="button" class="segmented-btn js-hero-mode-btn is-active" data-mode="clubs" aria-pressed="true">باشگاه‌ها</button>
+                  <button type="button" class="segmented-btn js-hero-mode-btn" data-mode="sports" aria-pressed="false">رشته‌های ورزشی</button>
+                </div>
+
+                <form id="home-search-form" class="search-wrapper" autocomplete="off">
+                  <div class="hero-search-row">
+                    <label for="home-search-input" class="sr-only">جست‌وجوی باشگاه یا رشته ورزشی در مشهد</label>
+                    <input
+                      type="search"
+                      id="home-search-input"
+                      class="form-control"
+                      placeholder="نام باشگاه، محله سجاد، وکیل‌آباد یا رشته..."
+                    />
+                    <button type="submit" class="btn btn-primary">جست‌وجو</button>
+                  </div>
+                  <div id="home-search-dropdown" class="search-dropdown" hidden></div>
+                </form>
+
+                <div style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;" id="home-neighborhoods-strip"></div>
+              </div>
+
+              <div class="hero-actions">
+                <a href="/pages/clubs.html" class="btn btn-secondary">مشاهده همه باشگاه‌های مشهد</a>
+                <a href="/pages/compare.html" class="btn btn-ghost">مقایسه دو باشگاه</a>
+              </div>
+            </div>
+
+            <div class="hero-media">
+              <img
+                src="/src/assets/images/hero_mashhad_athletics_1795330270876.jpg"
+                alt="نمای داخلی یک مجموعه ورزشی مدرن"
+                referrerpolicy="no-referrer"
+              />
+              <div class="hero-media-caption">
+                دایرکتوری اختصاصی شهر مشهد · داده‌های نمایش‌داده‌شده در این نسخه آزمایشی هستند
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About SPORTLINK Section -->
+      <section id="about" class="section surface-navy">
+        <div class="container">
+          <div class="section-header" style="margin-bottom:1.5rem;">
+            <div>
+              <h2 class="section-title">معرفی کوتاه SPORTLINK</h2>
+              <p class="section-subtitle">
+                SPORTLINK یک مرجع متمرکز برای معرفی ساختارمند باشگاه‌ها و مجموعه‌های ورزشی است که در گام نخست برای ورزشکاران و مدیران مجموعه‌های شهر مشهد طراحی شده است.
+              </p>
+            </div>
+            <div class="meta-inline">
+              <span><strong class="tabular-nums" id="stat-clubs-count">۱۵</strong> مجموعه منتشرشده</span>
+              <span class="meta-sep" aria-hidden="true">·</span>
+              <span><strong class="tabular-nums" id="stat-sports-count">۳۵</strong> رشته ورزشی</span>
+              <span class="meta-sep" aria-hidden="true">·</span>
+              <span>۷ دسته‌بندی تخصصی</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Clubs -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">مجموعه‌های منتخب مشهد</h2>
+              <p class="section-subtitle">مجموعه‌های نمونه در محله‌های سجاد، وکیل‌آباد، هاشمیه، احمدآباد، کوهسنگی و الهیه</p>
+            </div>
+            <a href="/pages/clubs.html" class="btn btn-secondary btn-sm">ورود به دایرکتوری باشگاه‌ها</a>
+          </div>
+          <div class="grid-3" id="home-featured-clubs"></div>
+        </div>
+      </section>
+
+      <!-- 7 Sports Categories -->
+      <section class="section surface-navy">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">دسته‌بندی رشته‌های ورزشی</h2>
+              <p class="section-subtitle">۳۵ رشته ورزشی استاندارد در ۷ دسته‌بندی برای دسترسی سریع به باشگاه‌های ارائه‌دهنده</p>
+            </div>
+            <a href="/pages/sports.html" class="btn btn-secondary btn-sm">مشاهده همه رشته‌ها</a>
+          </div>
+          <div class="grid-4" id="home-categories-grid"></div>
+        </div>
+      </section>
+
+      <!-- Advantages of SPORTLINK -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">مزایای استفاده از SPORTLINK</h2>
+              <p class="section-subtitle">اطلاعات شفاف و استاندارد برای تصمیم‌گیری دقیق‌تر پیش از مراجعه حضوری</p>
+            </div>
+          </div>
+          <div class="grid-3">
+            <article class="advantage-item">
+              <div class="advantage-index en-wordmark">01</div>
+              <h3 style="font-size:1.1rem;">فیلتر دقیق بر اساس محله و امکانات</h3>
+              <p style="margin:0;font-size:0.9rem;color:var(--text-muted);">
+                باشگاه‌های مشهد را بر پایه محله، رشته ورزشی، نوع مجموعه، ساعات فعالیت و امکانات واقعی پیدا کنید.
+              </p>
+            </article>
+            <article class="advantage-item">
+              <div class="advantage-index en-wordmark">02</div>
+              <h3 style="font-size:1.1rem;">مقایسه هم‌زمان دو مجموعه</h3>
+              <p style="margin:0;font-size:0.9rem;color:var(--text-muted);">
+                مشخصات، رشته‌ها، امکانات، ساعت کاری و حدود قیمت دو باشگاه انتخابی را کنار هم بررسی کنید.
+              </p>
+            </article>
+            <article class="advantage-item">
+              <div class="advantage-index en-wordmark">03</div>
+              <h3 style="font-size:1.1rem;">اطلاعات راستی‌آزمایی‌شده توسط مدیریت</h3>
+              <p style="margin:0;font-size:0.9rem;color:var(--text-muted);">
+                انتشار هر مجموعه و تغییرات کلیدی آن تنها پس از بررسی تیم SPORTLINK انجام می‌شود و کاربران نیز می‌توانند مغایرت‌ها را گزارش کنند.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Club Owners Invitation -->
+      <section class="section-tight">
+        <div class="container">
+          <div class="owner-cta-banner">
+            <div>
+              <h2 style="font-size:1.4rem;margin-bottom:0.5rem;">مالک یا مدیر باشگاه ورزشی در مشهد هستید؟</h2>
+              <p style="margin:0;color:var(--gray-light);max-width:60ch;">
+                درخواست مدیریت مجموعه خود را ثبت کنید تا پس از تأیید مدارک توسط SPORTLINK، اطلاعات، تصاویر، رشته‌ها و ساعات فعالیت باشگاه را مستقیماً مدیریت کنید.
+              </p>
+            </div>
+            <a href="/pages/management-request.html" class="btn btn-primary">ثبت درخواست مدیریت یا ثبت باشگاه</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+    <script type="module" src="/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,177 @@
+.form-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-light);
+}
+
+.form-control,
+.form-select,
+.form-textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.6rem 0.85rem;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  color: var(--white);
+  font-size: 0.9375rem;
+  transition: border-color var(--duration-fast) var(--ease-out);
+}
+
+.form-control::placeholder,
+.form-textarea::placeholder {
+  color: var(--text-subtle);
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--accent-gold);
+  /* Do not remove the global :focus-visible ring from reset.css — keyboard
+     users must keep a clearly visible focus indicator. */
+}
+
+.form-control.is-invalid,
+.form-select.is-invalid,
+.form-textarea.is-invalid {
+  border-color: var(--error);
+}
+
+.form-textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.input-with-action {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-action .form-control {
+  padding-left: 3rem;
+}
+
+.input-action-btn {
+  position: absolute;
+  left: 0.4rem;
+  min-width: 36px;
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+}
+
+.input-action-btn:hover {
+  color: var(--white);
+}
+
+.field-error {
+  font-size: 0.8125rem;
+  color: #fca5a5;
+  min-height: 1.15em;
+}
+
+.field-hint {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.form-alert {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  border: 1px solid transparent;
+}
+
+.form-alert[hidden] {
+  display: none;
+}
+
+.form-alert.is-error {
+  background-color: var(--error-bg);
+  border-color: rgba(239, 68, 68, 0.45);
+  color: #fecaca;
+}
+
+.form-alert.is-success {
+  background-color: var(--success-bg);
+  border-color: rgba(34, 197, 94, 0.45);
+  color: #bbf7d0;
+}
+
+.form-alert.is-info {
+  background-color: var(--info-bg);
+  border-color: rgba(56, 189, 248, 0.45);
+  color: #bae6fd;
+}
+
+/* Password Strength Bar */
+.strength-meter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.strength-bars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.strength-seg {
+  height: 5px;
+  border-radius: 3px;
+  background-color: rgba(226, 232, 240, 0.14);
+  transition: background-color var(--duration-fast);
+}
+
+.strength-seg.is-weak { background-color: var(--error); }
+.strength-seg.is-fair { background-color: var(--warning); }
+.strength-seg.is-good { background-color: var(--info); }
+.strength-seg.is-strong { background-color: var(--success); }
+
+/* Checkbox & Radio */
+.check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: 0.875rem;
+  color: var(--gray-light);
+  cursor: pointer;
+}
+
+.check-item input[type='checkbox'],
+.check-item input[type='radio'] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--accent-gold);
+  flex-shrink: 0;
+}
+
+.check-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-2) var(--space-4);
+}

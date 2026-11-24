@@ -1,0 +1,304 @@
+@media (max-width: 1200px) {
+  .grid-4 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .kpi-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-grid,
+  .club-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .directory-layout {
+    grid-template-columns: 240px minmax(0, 1fr);
+  }
+
+  .workspace-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .workspace-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: var(--space-2);
+  }
+
+  .workspace-nav-btn {
+    width: auto;
+    white-space: nowrap;
+  }
+
+  /* Dashboard workspaces need a bounded grid item before the tab row can scroll. */
+  body[data-page="admin-dashboard"] .workspace-shell,
+  body[data-page="manager-dashboard"] .workspace-shell,
+  body[data-page="admin-dashboard"] .workspace-sidebar,
+  body[data-page="manager-dashboard"] .workspace-sidebar,
+  body[data-page="admin-dashboard"] .workspace-content,
+  body[data-page="manager-dashboard"] .workspace-content {
+    min-width: 0;
+    width: 100%;
+  }
+
+  body[data-page="admin-dashboard"] .workspace-nav,
+  body[data-page="manager-dashboard"] .workspace-nav {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  body[data-page="admin-dashboard"] .workspace-nav-btn,
+  body[data-page="manager-dashboard"] .workspace-nav-btn {
+    flex: 0 0 auto;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  /* Retain the existing visual scale while giving touch controls a reliable hit area. */
+  .btn-sm,
+  .btn-icon,
+  .input-action-btn,
+  .filter-remove-btn,
+  #forgot-password-btn {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  #forgot-password-btn,
+  a.btn-sm,
+  button.btn-sm {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Keep the visual scale, but give every interactive control a 44px hit area. */
+  .skip-link,
+  .header-inner .brand-wordmark,
+  .bell-link,
+  .nav-link,
+  .segmented-btn,
+  .club-card-title a,
+  .footer-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .bell-link {
+    min-width: 44px;
+    justify-content: center;
+  }
+
+  /* Slightly smaller on touch viewports so the nav and controls keep their spacing. */
+  .brand-logo {
+    width: 36px;
+    height: 36px;
+    padding: 1px;
+  }
+
+  .brand-logo-frame {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand-wordmark {
+    font-size: 1.1rem;
+  }
+
+  a.btn-sm,
+  button.btn-sm {
+    padding-block: 0.45rem;
+  }
+
+  .club-card-overlay-actions {
+    gap: var(--space-2);
+  }
+
+  .container {
+    padding-inline: var(--space-4);
+  }
+
+  .section {
+    padding-block: var(--space-8);
+  }
+
+  /* Header collapses desktop nav into Drawer */
+  .header-nav,
+  .header-actions .desktop-only {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-flex;
+  }
+
+  .header-inner {
+    gap: var(--space-3);
+    min-height: 64px;
+  }
+
+  /* Directory: sidebar hides on mobile and uses Bottom Sheet */
+  .directory-layout {
+    grid-template-columns: 1fr;
+    padding-block: var(--space-5);
+  }
+
+  .directory-sidebar {
+    display: none;
+  }
+
+  .mobile-filter-trigger {
+    display: inline-flex;
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  .form-row-2,
+  .check-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-search-row {
+    flex-direction: column;
+  }
+
+  .hero-media {
+    min-height: 240px;
+  }
+
+  .auth-card {
+    padding: var(--space-5);
+  }
+
+  .compare-table-desktop {
+    display: none;
+  }
+
+  .sport-hero-split {
+    grid-template-columns: 1fr !important;
+  }
+
+  .compare-mobile-cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .compare-floating-bar {
+    right: var(--space-4);
+    left: var(--space-4);
+    justify-content: space-between;
+  }
+
+  .toast-region {
+    left: var(--space-4);
+    right: var(--space-4);
+    bottom: var(--space-4);
+    max-width: none;
+  }
+
+  /* Responsive Tables -> stacked cards */
+  .table-responsive-cards thead {
+    display: none;
+  }
+
+  .table-responsive-cards,
+  .table-responsive-cards tbody,
+  .table-responsive-cards tr,
+  .table-responsive-cards td {
+    display: block;
+    width: 100%;
+  }
+
+  .table-responsive-cards tr {
+    padding: var(--space-3) var(--space-4);
+    border-bottom: 1px solid var(--border-strong);
+  }
+
+  .table-responsive-cards td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-3);
+    padding: 0.45rem 0;
+    border-bottom: 1px solid var(--border-subtle);
+    text-align: left;
+  }
+
+  .table-responsive-cards td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--text-muted);
+    text-align: right;
+  }
+
+  .table-responsive-cards td:last-child {
+    border-bottom: none;
+  }
+
+  /* Keep dashboard data cards inside the viewport while preserving every value. */
+  body[data-page="admin-dashboard"] .table-wrap,
+  body[data-page="manager-dashboard"] .table-wrap {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  body[data-page="admin-dashboard"] .table-responsive-cards,
+  body[data-page="manager-dashboard"] .table-responsive-cards {
+    min-width: 0;
+    table-layout: fixed;
+  }
+
+  body[data-page="admin-dashboard"] .table-responsive-cards tr,
+  body[data-page="manager-dashboard"] .table-responsive-cards tr {
+    min-width: 0;
+  }
+
+  body[data-page="admin-dashboard"] .table-responsive-cards td,
+  body[data-page="manager-dashboard"] .table-responsive-cards td {
+    display: grid;
+    grid-template-columns: minmax(5.25rem, 34%) minmax(0, 1fr);
+    align-items: start;
+    min-width: 0;
+    text-align: right;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  body[data-page="admin-dashboard"] .table-responsive-cards td::before,
+  body[data-page="manager-dashboard"] .table-responsive-cards td::before {
+    min-width: 0;
+  }
+
+  body[data-page="admin-dashboard"] .table-responsive-cards td > *,
+  body[data-page="manager-dashboard"] .table-responsive-cards td > * {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 520px) {
+  /* Two KPI columns squeeze long Persian labels on small phones. */
+  .kpi-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

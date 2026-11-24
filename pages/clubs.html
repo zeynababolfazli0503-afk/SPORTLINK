@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-precomposed.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>دایرکتوری باشگاه‌های مشهد | SPORTLINK</title>
+    <meta name="description" content="جست‌وجو، فیلتر و مقایسه باشگاه‌ها و مجموعه‌های ورزشی شهر مشهد در SPORTLINK." />
+    <meta property="og:title" content="دایرکتوری باشگاه‌های مشهد | SPORTLINK" />
+    <meta property="og:description" content="جست‌وجو، فیلتر و مقایسه باشگاه‌ها و مجموعه‌های ورزشی شهر مشهد." />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body data-page="clubs">
+    <a href="#main-content" class="skip-link">رفتن به محتوای اصلی</a>
+    <div id="site-header"></div>
+
+    <main id="main-content">
+      <section class="page-intro">
+        <div class="container">
+          <nav class="breadcrumbs" aria-label="مسیر صفحه">
+            <a href="/index.html">صفحه اصلی</a>
+            <span aria-hidden="true">/</span>
+            <span>باشگاه‌های مشهد</span>
+          </nav>
+          <h1>دایرکتوری باشگاه‌های ورزشی مشهد</h1>
+          <p>مجموعه‌های ورزشی منتشرشده در شهر مشهد را بر اساس محله، رشته ورزشی، امکانات و محدوده قیمت جست‌وجو و مقایسه کنید.</p>
+        </div>
+      </section>
+
+      <div class="container">
+        <div class="directory-layout">
+          <!-- Desktop Filters Sidebar -->
+          <aside class="directory-sidebar filter-panel" aria-label="فیلترهای دسکتاپ">
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <h2 style="font-size:1rem;margin:0;">فیلترها</h2>
+              <button type="button" class="btn btn-ghost btn-sm" id="desk-reset-filters">پاک‌کردن</button>
+            </div>
+            <div id="desktop-filter-fields" class="form-stack" style="gap:1rem;"></div>
+          </aside>
+
+          <!-- Main Directory Results -->
+          <section aria-label="نتایج باشگاه‌ها">
+            <form id="clubs-search-form" class="search-wrapper" style="margin-bottom:1rem;" autocomplete="off">
+              <div class="hero-search-row">
+                <label for="clubs-search-input" class="sr-only">جست‌وجو در باشگاه‌های مشهد</label>
+                <input
+                  type="search"
+                  id="clubs-search-input"
+                  class="form-control"
+                  placeholder="جست‌وجوی نام باشگاه، محله یا رشته ورزشی..."
+                />
+                <button type="submit" class="btn btn-primary">جست‌وجو</button>
+              </div>
+              <div id="clubs-search-dropdown" class="search-dropdown" hidden></div>
+            </form>
+
+            <div class="directory-toolbar">
+              <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
+                <button type="button" class="btn btn-secondary btn-sm mobile-filter-trigger" id="mobile-filter-open-btn" aria-haspopup="dialog" aria-expanded="false">
+                  فیلترها
+                </button>
+                <span id="clubs-results-count" class="tabular-nums" style="font-size:0.9rem;color:var(--gray-light);font-weight:600;"></span>
+              </div>
+
+              <div style="display:flex;align-items:center;gap:0.5rem;">
+                <label for="clubs-sort-select" style="font-size:0.875rem;color:var(--text-muted);">مرتب‌سازی:</label>
+                <select id="clubs-sort-select" class="form-select" style="width:auto;min-height:38px;"></select>
+              </div>
+            </div>
+
+            <div id="active-filters-bar" class="active-filters-bar" hidden></div>
+            <div id="clubs-results-grid" class="grid-3"></div>
+
+            <div id="clubs-pagination" class="pagination" aria-label="صفحه‌بندی نتایج"></div>
+
+            <div id="clubs-mobile-more-wrap" style="text-align:center;margin-top:1.5rem;" hidden>
+              <button type="button" class="btn btn-secondary" id="clubs-mobile-more-btn" style="width:100%;">نمایش بیشتر</button>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Mobile Bottom Sheet Filters -->
+      <div class="bottom-sheet-backdrop" id="filter-sheet-backdrop" hidden></div>
+      <div class="bottom-sheet" id="filter-bottom-sheet" role="dialog" aria-modal="true" aria-label="فیلتر باشگاه‌ها" hidden>
+        <div class="bottom-sheet-header">
+          <h2 style="font-size:1rem;margin:0;">فیلتر باشگاه‌های مشهد</h2>
+          <button type="button" class="btn-icon" id="mobile-filter-close-btn" aria-label="بستن فیلترها">✕</button>
+        </div>
+        <div class="bottom-sheet-body" id="filter-sheet-body"></div>
+        <div class="bottom-sheet-footer">
+          <button type="button" class="btn btn-ghost" id="mobile-filter-reset-btn" style="flex:1;">پاک‌کردن همه</button>
+          <button type="button" class="btn btn-primary" id="mobile-filter-apply-btn" style="flex:2;">اعمال فیلترها</button>
+        </div>
+      </div>
+
+      <!-- Floating Compare Bar -->
+      <div class="compare-floating-bar" id="compare-floating-bar" hidden>
+        <span id="compare-floating-count" class="tabular-nums" style="font-size:0.875rem;font-weight:600;"></span>
+        <div style="display:flex;gap:0.5rem;">
+          <button type="button" class="btn btn-ghost btn-sm" id="compare-floating-clear">حذف</button>
+          <a href="/pages/compare.html" class="btn btn-primary btn-sm">مشاهده مقایسه</a>
+        </div>
+      </div>
+    </main>
+
+    <div id="site-footer"></div>
+    <script type="module" src="/js/app.js"></script>
+  </body>
+</html>

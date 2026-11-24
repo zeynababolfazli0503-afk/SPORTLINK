@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-precomposed.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تماس با SPORTLINK</title>
+    <meta name="description" content="فرم تماس و راه‌های ارتباطی رسمی پلتفرم SPORTLINK." />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body data-page="contact">
+    <a href="#main-content" class="skip-link">رفتن به محتوای اصلی</a>
+    <div id="site-header"></div>
+
+    <main id="main-content">
+      <section class="page-intro">
+        <div class="container">
+          <h1>تماس با SPORTLINK</h1>
+          <p>فرم تماس در این نسخه به سرویس پشتیبانی متصل نیست؛ ارسال واقعی پیام پس از اتصال بک‌اند فعال می‌شود.</p>
+        </div>
+      </section>
+
+      <div class="container section">
+        <div class="grid-2" style="align-items:start;">
+          <section class="card">
+            <h2 style="font-size:1.2rem;">ارسال پیام</h2>
+            <div id="contact-success-alert" class="form-alert is-info" hidden style="margin-bottom:1rem;">
+              پیام ارسال نشد؛ سرویس پشتیبانی هنوز متصل نیست.
+            </div>
+            <form id="contact-form" class="form-stack" novalidate>
+              <div class="form-group">
+                <label class="form-label" for="contact-name">نام و نام خانوادگی</label>
+                <input type="text" id="contact-name" class="form-control" />
+                <span class="field-error" id="contact-name-error"></span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-email">ایمیل</label>
+                <input type="email" id="contact-email" class="form-control" placeholder="name@example.com" />
+                <span class="field-error" id="contact-email-error"></span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-subject">موضوع</label>
+                <input type="text" id="contact-subject" class="form-control" />
+                <span class="field-error" id="contact-subject-error"></span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-message">متن پیام</label>
+                <textarea id="contact-message" class="form-textarea"></textarea>
+                <span class="field-error" id="contact-message-error"></span>
+              </div>
+              <button type="submit" class="btn btn-primary" id="contact-submit-btn">ارسال پیام</button>
+            </form>
+          </section>
+
+          <aside class="card">
+            <h2 style="font-size:1.2rem;">راه‌های ارتباطی رسمی (پلیسهولدر آزمایشی)</h2>
+            <p style="font-size:0.875rem;color:var(--text-muted);">
+              اطلاعات زیر تا زمان راه‌اندازی رسمی به عنوان Placeholder قرار داده شده‌اند:
+            </p>
+            <div class="info-list">
+              <div class="info-list-row">
+                <span class="info-list-label">ایمیل رسمی</span>
+                <span class="en-wordmark">info-placeholder@sportlink.ir</span>
+              </div>
+              <div class="info-list-row">
+                <span class="info-list-label">شماره تماس</span>
+                <span class="tabular-nums">۰۵۱-۰۰۰۰۰۰۰۰ (پلیسهولدر)</span>
+              </div>
+              <div class="info-list-row">
+                <span class="info-list-label">منطقه فعالیت</span>
+                <span>مشهد، ایران (Asia/Tehran)</span>
+              </div>
+              <div class="info-list-row">
+                <span class="info-list-label">اینستاگرام رسمی</span>
+                <span class="en-wordmark">@sportlink.ir (Placeholder)</span>
+              </div>
+              <div class="info-list-row">
+                <span class="info-list-label">لینکدین / تلگرام</span>
+                <span class="en-wordmark">@sportlink_official (Placeholder)</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <div id="site-footer"></div>
+    <script type="module" src="/js/app.js"></script>
+  </body>
+</html>
