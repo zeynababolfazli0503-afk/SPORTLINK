@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-precomposed.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>درخواست مدیریت یا ثبت باشگاه | SPORTLINK</title>
+    <meta name="description" content="ثبت درخواست مدیریت باشگاه ورزشی یا ثبت مجموعه جدید در شهر مشهد." />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body data-page="management-request">
+    <a href="#main-content" class="skip-link">رفتن به محتوای اصلی</a>
+    <div id="site-header"></div>
+
+    <main id="main-content">
+      <section class="page-intro">
+        <div class="container">
+          <h1>درخواست مدیریت و ثبت مجموعه ورزشی</h1>
+          <p>فرم‌های نمایشی درخواست مدیریت و ثبت مجموعه؛ ارسال واقعی و بررسی درخواست‌ها پس از اتصال سرویس بک‌اند فعال می‌شود.</p>
+        </div>
+      </section>
+
+      <div class="container section">
+        <div class="form-alert is-info" style="margin-bottom:1rem;">این نسخه به بک‌اند متصل نیست. فرم‌ها فقط اعتبارسنجی می‌شوند؛ اطلاعاتی ارسال یا ذخیره نمی‌شود. اطلاعات واقعی وارد نکنید.</div>
+        <div class="grid-2" style="align-items:start;">
+          <div class="form-stack">
+            <section class="card">
+              <h2 style="font-size:1.2rem;">درخواست مدیریت باشگاه موجود</h2>
+              <form id="management-request-form" class="form-stack" novalidate>
+                <div id="management-demo-status" class="form-alert is-info" hidden></div>
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label class="form-label" for="mr-first-name">نام</label>
+                    <input type="text" id="mr-first-name" class="form-control" />
+                    <span class="field-error" id="mr-first-error"></span>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="mr-last-name">نام خانوادگی</label>
+                    <input type="text" id="mr-last-name" class="form-control" />
+                    <span class="field-error" id="mr-last-error"></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="mr-mobile">شماره موبایل</label>
+                  <input type="tel" id="mr-mobile" class="form-control tabular-nums" placeholder="09151234567" />
+                  <span class="field-error" id="mr-mobile-error"></span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="mr-club-select">انتخاب از فهرست باشگاه‌ها (اختیاری)</label>
+                  <select id="mr-club-select" class="form-select"></select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="mr-club-name">نام باشگاه</label>
+                  <input type="text" id="mr-club-name" class="form-control" placeholder="نام دقیق مجموعه ورزشی" />
+                  <span class="field-error" id="mr-club-error"></span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="mr-document">مدرک اثبات مالکیت یا مدیریت (برای مرحله بررسی)</label>
+                  <input type="file" id="mr-document" class="form-control" accept=".pdf,.jpg,.jpeg,.png" />
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="mr-submit-btn">ارسال درخواست مدیریت</button>
+              </form>
+            </section>
+
+            <section class="card">
+              <h2 style="font-size:1.2rem;">درخواست ثبت مجموعه جدید در مشهد</h2>
+              <p style="font-size:0.875rem;color:var(--text-muted);">
+                تا تکمیل اطلاعات الزامی و تأیید نهایی تیم SPORTLINK، باشگاه در دایرکتوری عمومی نمایش داده نمی‌شود.
+              </p>
+              <form id="new-club-register-form" class="form-stack" novalidate>
+                <div id="new-club-demo-status" class="form-alert is-info" hidden></div>
+                <div class="form-group">
+                  <label class="form-label" for="nc-name">نام باشگاه</label>
+                  <input type="text" id="nc-name" class="form-control" />
+                  <span class="field-error" id="nc-name-error"></span>
+                </div>
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label class="form-label" for="nc-neighborhood">محله در مشهد</label>
+                    <select id="nc-neighborhood" class="form-select"></select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="nc-type">نوع مجموعه</label>
+                    <select id="nc-type" class="form-select"></select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="nc-address">آدرس دقیق در مشهد</label>
+                  <input type="text" id="nc-address" class="form-control" />
+                  <span class="field-error" id="nc-address-error"></span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="nc-phone">شماره تماس مجموعه</label>
+                  <input type="text" id="nc-phone" class="form-control tabular-nums" />
+                  <span class="field-error" id="nc-phone-error"></span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="nc-desc">توضیحات</label>
+                  <textarea id="nc-desc" class="form-textarea"></textarea>
+                  <span class="field-error" id="nc-desc-error"></span>
+                </div>
+                <button type="submit" class="btn btn-secondary" id="nc-submit-btn">ارسال درخواست ثبت باشگاه</button>
+              </form>
+            </section>
+          </div>
+
+          <section>
+            <h2 style="font-size:1.2rem;margin-bottom:1rem;">وضعیت درخواست‌های ثبت‌شده</h2>
+            <div id="mr-requests-list" class="form-stack"></div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <div id="site-footer"></div>
+    <script type="module" src="/js/app.js"></script>
+  </body>
+</html>

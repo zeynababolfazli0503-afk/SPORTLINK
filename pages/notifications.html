@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-precomposed.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>اعلان‌ها | SPORTLINK</title>
+    <meta name="description" content="مشاهده و مدیریت اعلان‌های سیستمی، اطلاعیه‌های رسمی و تغییر وضعیت درخواست‌ها." />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body data-page="notifications">
+    <a href="#main-content" class="skip-link">رفتن به محتوای اصلی</a>
+    <div id="site-header"></div>
+
+    <main id="main-content">
+      <section class="page-intro">
+        <div class="container">
+          <h1>اعلان‌ها و اطلاعیه‌ها</h1>
+          <p>پیگیری وضعیت درخواست‌ها، گزارش‌ها و اطلاعیه‌های رسمی SPORTLINK</p>
+        </div>
+      </section>
+
+      <div class="container section-tight">
+        <div class="form-alert is-info" style="margin-bottom:1rem;">اعلان‌ها و وضعیت خوانده‌شدن در این نسخه نمونه و محلی هستند؛ اعلان واقعی از سرور دریافت نمی‌شود.</div>
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;">
+          <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
+            <label for="notif-type-filter" class="sr-only">فیلتر نوع اعلان</label>
+            <select id="notif-type-filter" class="form-select" style="width:auto;min-width:220px;"></select>
+
+            <label class="check-item" style="white-space:nowrap;">
+              <input type="checkbox" id="notif-sound-toggle" />
+              <span>صدای اعلان فعال باشد</span>
+            </label>
+          </div>
+
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+            <button type="button" class="btn btn-ghost btn-sm" id="notif-simulate-btn">شبیه‌سازی اعلان جدید</button>
+            <button type="button" class="btn btn-secondary btn-sm" id="notif-mark-all-btn">علامت‌گذاری همه به‌عنوان خوانده‌شده</button>
+            <button type="button" class="btn btn-danger btn-sm" id="notif-clear-all-btn">پاک‌کردن همه</button>
+          </div>
+        </div>
+
+        <div class="form-alert is-info" style="margin-bottom:1rem;">اعلان‌ها و وضعیت خوانده‌شدن در این نسخه نمونه و محلی هستند؛ اعلان واقعی از سرور دریافت نمی‌شود.</div>
+        <div id="notifications-list" class="form-stack"></div>
+      </div>
+    </main>
+
+    <div id="site-footer"></div>
+    <script type="module" src="/js/app.js"></script>
+  </body>
+</html>
